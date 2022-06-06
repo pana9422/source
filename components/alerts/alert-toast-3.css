@@ -1,4 +1,4 @@
-.alert-toast-3 .alert{
+.alert{
     background-color: #2f8de7;
     color: #eaf4fd;
     padding: 12px 24px;
@@ -10,7 +10,7 @@
     display: flex;
     gap: 12px;
 }
-.alert-toast-3 .alert__callout{
+.alert__callout{
     position: relative;
     display: block;
     width: 5px;
@@ -19,22 +19,22 @@
     border-radius: 6px;
 
 }
-.alert-toast-3 .alert__body{
+.alert__body{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.alert-toast-3 .alert__header{
+.alert__header{
     display: flex;
     gap: 12px;
     width: 100%;
 }
-.alert-toast-3 .alert__title{
+.alert__title{
     flex-grow: 1;
     font-weight: 700;
 }
-.alert-toast-3 .alert__closed{
+.alert__closed{
     border: none;
     cursor: pointer;
     color: inherit;
@@ -42,10 +42,10 @@
     
     transition: opacity .3s;
 }
-.alert-toast-3 .alert__closed:hover{
+.alert__closed:hover{
     opacity: 1;
 }
-.alert-toast-3 .alert__content{
+.alert__content{
     flex-grow: 1;
     width: 100%;
 }
