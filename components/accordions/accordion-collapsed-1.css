@@ -1,17 +1,17 @@
 .accordion-collapsed-1 .accordions-group {
-   border: 1px solid var(--neutral-100);
-   border-radius: var(--border-radius);
-   background-color: var(--white);
+   border: 1px solid #e8e8e8;
+   border-radius: 6px;
+   background-color: #ffffff;
    width: 100%;
 }
 
 .accordion-collapsed-1 .accordion {
    height: max-content;
-   padding: 1.2rem 2.4rem;
-   color: var(--neutral-500);
+   padding: 12px 24px;
+   color: #8e8e8e;
 
    overflow: visible;
-   transition: overflow var(--transition);
+   transition: overflow .3s;
 }
 
 .accordion-collapsed-1 .accordion__header {
@@ -22,18 +22,18 @@
 }
 
 .accordion-collapsed-1 .accordion__title {
-   font-size: var(--font-size-xl);
+   font-size: 24px;
 }
 
 .accordion-collapsed-1 .accordion__icon {
    cursor: pointer;
-   font-size: var(--font-size-2xl);
-   transition: transform var(--transition);
+   font-size: 32px;
+   transition: transform .3s;
 }
 
 .accordion-collapsed-1 .accordion__body {
-   line-height: var(--text-line-height);
-   margin-top: 2.4rem;
+   line-height: 1.5;
+   margin-top: 24px;
 }
 
 .accordion-collapsed-1 .accordion--collapsed {
@@ -41,7 +41,7 @@
 }
 
 .accordion-collapsed-1 .accordion__body {
-   transition: transform var(--transition), opacity var(--transition);
+   transition: transform .3s, opacity .3s;
    transform-origin: top center;
 }
 
