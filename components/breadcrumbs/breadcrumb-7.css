@@ -1,0 +1,31 @@
+.breadcrumb{
+    --opacity: .6;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: var(--france-600);
+    padding: .6rem;
+}
+.breadcrumb__item{
+    align-items: center;
+    display: flex;
+    gap: 1.2rem;
+    color: inherit;
+}
+.breadcrumb__item::after{
+    font-family: var(--font-icon);
+    opacity: var(--opacity);
+    content: '\f105'
+}
+.breadcrumb__item:last-child::after{
+    content: '';
+}
+.breadcrumb__link{
+    opacity: var(--opacity);
+    color: inherit;
+    transition: opacity var(--transition)
+}
+.breadcrumb__link:hover,
+.breadcrumb__link--active{
+    opacity: 1;
+}

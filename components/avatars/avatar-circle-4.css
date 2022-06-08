@@ -1,0 +1,32 @@
+.avatar{
+    display: inline-flex;
+    margin-left: 15px;
+}
+.avatar__image {
+    width: 6rem;
+    height: 6rem;
+    margin-left: -15px;
+    overflow: hidden;
+    position: relative;
+}
+.avatar__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #fefefe;
+}
+.avatar__image::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #fefefe;
+    background-color: #48bb48;
+    border-radius: 100%;
+}
+.disconnected::before{
+    background-color: #9e9e9e;
+}
