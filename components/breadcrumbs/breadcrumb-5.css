@@ -2,18 +2,18 @@
     --opacity: .6;
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    color: var(--france-600);
-    padding: .6rem;
+    gap: 12px;
+    color: #2366be;
+    padding: 6px;
 }
 .breadcrumb__item{
     align-items: center;
     display: flex;
-    gap: 1.2rem;
+    gap: 12px;
     color: inherit;
 }
 .breadcrumb__item::after{
-    font-family: var(--font-icon);
+    font-family: "FontAwesome";
     opacity: var(--opacity);
     content: '\f105'
 }
@@ -23,7 +23,7 @@
 .breadcrumb__link{
     opacity: var(--opacity);
     color: inherit;
-    transition: opacity var(--transition)
+    transition: opacity .3s
 }
 .breadcrumb__link:hover,
 .breadcrumb__link--active{
