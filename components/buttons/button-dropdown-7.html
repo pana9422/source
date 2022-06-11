@@ -1,17 +1,118 @@
-<button class="btn btn--s btn--dropdown">
-	<i class="btn__icon fa-solid fa-link"></i>
-	<span class="btn__txt">Button & icon</span>
-	<span class="btn__arrow"><i class="btn__arrowIcon fa-solid fa-angle-down"></i></span>
+<style class="button-dropdown-7">
+	.button-dropdown-7 .btn {
+		--font-size: 16px;
+		--line-height: 1.5;
 
-	<ul class="btn__dropdown">
-		<li class="btn__item">
-			<a class="btn__link" href="#">Option one of selected</a>
-		</li>
-		<li class="btn__item">
-			<a class="btn__link" href="#">Option two</a>
-		</li>
-		<li class="btn__item">
-			<a class="btn__link" href="#">Option three</a>
-		</li>
-	<ul>
-</button>
+		font-size: var(--font-size);	
+		line-height: var(--line-height);
+		width: max-content;
+		outline: none;
+		padding: .375em 0.75em;
+		border-radius: 6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: .75em;
+		cursor:pointer;
+		border: 1px solid;
+		border-color: currentColor;
+		transition: opacity .3s, background-color .3s;
+	}
+	.button-dropdown-7 .btn--s{
+		background-color: #2589e7;
+		border-color: #2589e7;
+		color: #ebebeb;
+	}
+	.button-dropdown-7 .btn__icon{
+		width: var(--font-size);
+		line-height: var(--line-height);
+	}
+	.button-dropdown-7 .btn--dropdown {
+		position: relative;
+		justify-content: space-between;
+	}
+	.button-dropdown-7 .btn__txt {
+		flex-grow: 2;
+		text-align: start;
+	}
+	.button-dropdown-7 .btn__arrow {
+		transition: transform .6s;
+	}
+	.button-dropdown-7 .btn__arrow--up {
+		transform: rotate(-180deg);
+	}
+	.button-dropdown-7 .btn--s:hover, 
+	.button-dropdown-7 .btn--s:active,
+	.button-dropdown-7 .btn--s.dropdown-opened  {
+		background-color: #1774ca;
+	}
+	.button-dropdown-7 .btn__dropdown {
+		min-width: 85%;
+		padding: 6px 0;
+		background-color: #fff;
+		box-shadow: 0 0 5px 2px #5e5e5e33;
+		border-radius: 6px;
+		position: absolute;
+		z-index: 1;
+		top: 120%; right: 0;
+		transform-origin: top center;
+		transform: scaleY(0);
+		opacity: 0;
+		transition: transform .6s, opacity .6s;
+	}
+	.button-dropdown-7 .btn__dropdown--unfolded {
+		opacity: 1;	
+		transform: scaleY(1);
+	}
+	.button-dropdown-7 .btn__link {
+		display: block;
+		width: 100%;
+		padding: 6px 12px;
+		color: #777777;
+		text-align: left;
+		transition: background-color .6;
+	}
+	.button-dropdown-7 .btn__link:active,
+	.button-dropdown-7 .btn__link:hover {
+		background-color: #f3f3f3;
+		color: #333;
+	}
+	.button-dropdown-7 .btn--small {
+		font-size: .8rem;
+	}
+	.button-dropdown-7 .btn--big {
+		font-size: var(--font-size-xl);
+	}
+</style>
+<div class="button-dropdown-7">
+	<button class="btn btn--s btn--dropdown">
+		<i class="btn__icon fa-solid fa-link"></i>
+		<span class="btn__txt">Button & icon</span>
+		<span class="btn__arrow"><i class="btn__arrowIcon fa-solid fa-angle-down"></i></span>
+	
+		<ul class="btn__dropdown">
+			<li class="btn__item">
+				<a class="btn__link" href="#">Option one of selected</a>
+			</li>
+			<li class="btn__item">
+				<a class="btn__link" href="#">Option two</a>
+			</li>
+			<li class="btn__item">
+				<a class="btn__link" href="#">Option three</a>
+			</li>
+		<ul>
+	</button>
+</div>
+<script class="button-dropdown-7">
+	const btnDropdown = document.querySelector('.btn--dropdown');
+	const dropdownList = document.querySelector('.btn--dropdown .btn__dropdown');
+
+	// Functions
+	const toggleState = () => {
+	btnDropdown.classList.toggle('dropdown-opened');
+	dropdownList.classList.toggle('btn__dropdown--unfolded');
+	}
+
+	// Code execution
+	btnDropdown.addEventListener('click', toggleState);
+</script>

@@ -1,14 +1,92 @@
-<button class="btn btn--s">
-    <i class="btn__icon fa-solid fa-link"></i>
-    <span class="btn__txt">Button & icon</span>
-</button>
+<style class="button-6">
+    .button-6 .btn {
+        --font-size: 16px;
+        --line-height: 1.5;
 
-<button class="btn btn--o">
-    <i class="btn__icon fa-solid fa-link"></i>
-    <span class="btn__txt">Button & icon</span>
-</button>
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        width: max-content;
+        outline: none;
+        padding: 0.375em 0.75em;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75em;
+        cursor: pointer;
+        border: 1px solid;
+        border-color: currentColor;
+        transition: opacity 0.3s, background-color 0.3s;
+    }
+    .button-6 .btn--s {
+        background-color: #2589e7;
+        border-color: #2589e7;
+        color: #ebebeb;
+    }
+    .button-6 .btn--l {
+        border: 0;
+    }
+    .button-6 .btn--o,
+    .button-6 .btn--l {
+        background-color: transparent;
+        color: #1774ca;
+    }
+    .button-6 .btn--loading {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    .button-6 .btn__icon {
+        width: var(--font-size);
+        line-height: var(--line-height);
+    }
+    .button-6 .btn--loading .btn__icon {
+        animation: rotate 1.5s infinite;
+    }
+    .button-6 .btn--s:hover,
+    .button-6 .btn--s:active {
+        background-color: #1774ca;
+    }
+    .button-6 .btn--o:hover,
+    .button-6 .btn--o:active,
+    .button-6 .btn--l:hover,
+    .button-6 .btn--l:active {
+        background-color: var(--france\/20);
+    }
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div class="button-6">
+    <button class="btn btn--s">
+        <i class="btn__icon fa-solid fa-link"></i>
+        <span class="btn__txt">Button & icon</span>
+    </button>
 
-<button class="btn btn--l">
-    <i class="btn__icon fa-solid fa-link"></i>
-    <span class="btn__txt">Button & icon</span>
-</button>
+    <button class="btn btn--o">
+        <i class="btn__icon fa-solid fa-link"></i>
+        <span class="btn__txt">Button & icon</span>
+    </button>
+
+    <button class="btn btn--l">
+        <i class="btn__icon fa-solid fa-link"></i>
+        <span class="btn__txt">Button & icon</span>
+    </button>
+</div>
+<script class="button-6">
+    const $button = document.querySelectorAll(".btn");
+
+    $button.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const $icon = btn.querySelector(".btn__icon");
+            btn.classList.add("btn--loading");
+            $icon.classList.replace("fa-link", "fa-spinner");
+
+            setTimeout(() => {
+                btn.classList.remove("btn--loading");
+                $icon.classList.replace("fa-spinner", "fa-link");
+            }, 5000);
+        });
+    });
+</script>

@@ -1,6 +1,43 @@
-<ul class="breadcrumb">
-    <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#"> <i class="fa-solid fa-house"></i> </a></li>
-    <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#"> Componentes</a></li>
-    <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#"> Navegación</a></li>
-    <li class="breadcrumb__item"> <a class="breadcrumb__link breadcrumb__link--active" href="#"> Botones </a></li>
-</ul>
+<style class="breadcrumb-5">
+    .breadcrumb-5 .breadcrumb {
+        --opacity: 0.6;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #2366be;
+        padding: 6px;
+    }
+    .breadcrumb-5 .breadcrumb__item {
+        align-items: center;
+        display: flex;
+        gap: 12px;
+        color: inherit;
+    }
+    .breadcrumb-5 .breadcrumb__item::after {
+        font-family: "FontAwesome";
+        opacity: var(--opacity);
+        content: "\f105";
+    }
+    .breadcrumb-5 .breadcrumb__item:last-child::after {
+        content: "";
+    }
+    .breadcrumb-5 .breadcrumb__link {
+        opacity: var(--opacity);
+        color: inherit;
+        transition: opacity 0.3s;
+    }
+    .breadcrumb-5 .breadcrumb__link:hover,
+    .breadcrumb-5 .breadcrumb__link--active {
+        opacity: 1;
+    }
+</style>
+<div class="breadcrumb-5">
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+            <a class="breadcrumb__link" href="#"> <i class="fa-solid fa-house"></i> </a>
+        </li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Componentes</a></li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Navegación</a></li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--active" href="#"> Botones </a></li>
+    </ul>
+</div>

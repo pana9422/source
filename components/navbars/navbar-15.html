@@ -1,0 +1,336 @@
+<style class="navbar-15">
+    .navbar-15 .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 100;
+    }
+    .navbar-15 .header__brand {
+        background-color: #fafafa;
+        border-bottom: 1px solid #e1e4e8;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 100;
+    }
+    .navbar-15 .header__brand > a {
+        height: 40px;
+    }
+    .navbar-15 .header__brand > a > img {
+        height: 100%;
+    }
+    .navbar-15 .header__navigation {
+        border: 0;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        background-color: transparent;
+        color: #939ca7;
+        border-radius: 6px;
+        font-size: 20px;
+        transition: background-color 0.6s;
+    }
+    .navbar-15 .header__navigation:hover {
+        background-color: #e2e4e5;
+    }
+    .navbar-15 .header__nav {
+        background-color: #fafafa;
+        position: relative;
+        top: 60px;
+        right: -100%;
+        max-width: 400px;
+        padding: 0 20px;
+        transition: transform 0.6s;
+        height: calc(100vh - 60px);
+        overflow-x: hidden;
+    }
+    .navbar-15 .header__nav--open {
+        transform: translateX(-100%);
+    }
+    .navbar-15 .header__navbar,
+    .navbar-15 .header__content {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #d2d2d2;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .navbar-15 .header__option {
+        display: flex;
+        padding: 12px 0;
+        gap: 10px;
+        color: #8695a4;
+        height: 40px;
+    }
+    .navbar-15 .header__option-icon {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-15 .header__option-text {
+        flex-grow: 1;
+    }
+    .navbar-15 .header__option-badge {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0.75em;
+        color: #e6e6e6;
+        background-color: #e63e54;
+        padding: 0.1em 0.4em;
+
+        cursor: pointer;
+        white-space: nowrap;
+        border-radius: 6px;
+    }
+    .navbar-15 .header__option:hover {
+        color: #3e4955;
+    }
+    .navbar-15 .header__option--search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 6px;
+        border: 1px solid #e1e4e8;
+        background-color: #f0f2f4;
+        overflow: hidden;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .navbar-15 .header__option--search span {
+        font-size: 16px;
+        color: #687a8d;
+        background-color: inherit;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-15 .header__option--search input {
+        background-color: inherit;
+        border: 0;
+        padding: 10px;
+        color: #727f8b;
+        flex-grow: 1;
+    }
+    .navbar-15 .header__option--search input::placeholder {
+        color: #c3cad1;
+    }
+    .navbar-15 .header__option--user {
+        border-bottom: 1px solid #d2d2d2;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 45px 1fr;
+        padding: 12px 0;
+        column-gap: 10px;
+        row-gap: 0;
+        height: auto;
+    }
+    .navbar-15 .header__avatar {
+        grid-row: span 2;
+        position: relative;
+        height: 45px;
+        display: inline-flex;
+    }
+    .navbar-15 .header__avatar-image {
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        position: relative;
+    }
+    .navbar-15 .header__avatar-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 2px solid #fefefe;
+    }
+    .navbar-15 .header__avatar-image::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 15px;
+        width: 15px;
+        border: 2px solid #fefefe;
+        background-color: #48bb48;
+        border-radius: 100%;
+    }
+    .navbar-15 .header__username {
+        font-size: 16px;
+        font-weight: 700;
+        color: #536271;
+    }
+    .navbar-15 .header__profesion {
+        font-size: 14px;
+        color: #687a8d;
+    }
+    .navbar-15 .header__navbar {
+        border-bottom: 0;
+    }
+    .navbar-15 .wrapper {
+        position: relative;
+        top: 60px;
+        padding: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .navbar-15 .wrapper__title {
+        font-size: 30px;
+        display: block;
+    }
+    @media screen and (min-width: 768px) {
+        .navbar-15 .header {
+            background-color: #fafafa;
+            border-bottom: 1px solid #e1e4e8;
+            display: flex;
+            height: 60px;
+            padding: 0 40px;
+            gap: 20px;
+        }
+        .navbar-15 .header__brand {
+            background-color: transparent;
+            width: auto;
+            border-bottom: 0;
+            justify-content: flex-start;
+            position: relative;
+            height: 100%;
+            padding: 0;
+        }
+        .navbar-15 .header__navigation {
+            display: none;
+        }
+        .navbar-15 .header__nav {
+            top: 0;
+            right: 0;
+            height: 100%;
+            max-width: unset;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            background-color: transparent;
+        }
+        .navbar-15 .header__nav--open {
+            transform: translateX(0);
+        }
+        .navbar-15 .header__content,
+        .navbar-15 .header__navbar {
+            flex-direction: row;
+            width: auto;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            align-items: center;
+        }
+        .navbar-15 .header__content {
+            gap: 10px;
+        }
+        .navbar-15 .header__content .header__option-text,
+        .navbar-15 .header__content .header__username,
+        .navbar-15 .header__content .header__profesion,
+        .navbar-15 .header__navbar .header__option-icon {
+            display: none;
+        }
+        .navbar-15 .header__option {
+            position: relative;
+            border: 0;
+            margin: 0;
+        }
+        .navbar-15 .header__navbar .header__option {
+            padding: 10px;
+        }
+        .navbar-15 .header__option-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .navbar-15 .header__option--user {
+            height: 100%;
+            order: 1;
+            display: flex;
+            align-items: center;
+        }
+    }
+</style>
+<div class="navbar-15">
+    <header class="header">
+        <div class="header__brand">
+            <a href="#">
+                <img src="/assets/image/brand.svg" alt="LayBlu Components" />
+            </a>
+            <button class="header__navigation" id="header__navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <nav class="header__nav">
+            <div class="header__content">
+                <label class="header__option header__option--search">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input placeholder="Buscar..." type="search" />
+                </label>
+                <a class="header__option header__option--user" href="#">
+                    <div class="header__avatar">
+                        <picture class="header__avatar-image">
+                            <img src="/assets/image/user-30.jpg" alt="Miguel J Medina" />
+                        </picture>
+                    </div>
+                    <span class="header__username">Miguel J Medina</span>
+                    <span class="header__profesion">Diseñador UI & Web</span>
+                </a>
+                <a class="header__option" href="#">
+                    <span class="header__option-icon"><i class="fa-solid fa-bell"></i></span>
+                    <span class="header__option-text">Notificaciones</span>
+                    <span class="header__option-badge">+9</span>
+                </a>
+                <a class="header__option" href="#">
+                    <span class="header__option-icon"><i class="fa-solid fa-envelope"></i></span>
+                    <span class="header__option-text">Mensajes</span>
+                    <span class="header__option-badge">+9</span>
+                </a>
+            </div>
+            <div class="header__navbar">
+                <a href="#" class="header__option">
+                    <span class="header__option-icon"><i class="fa-solid fa-gauge"></i></span>
+                    <span class="header__option-text">Dashboard</span>
+                </a>
+                <a href="#" class="header__option">
+                    <span class="header__option-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+                    <span class="header__option-text">Docs</span>
+                </a>
+                <a href="#" class="header__option">
+                    <span class="header__option-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="header__option-text">Teams</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class="wrapper">
+        <span class="wrapper__title">Hello Word</span>
+        <button>click me</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam nisi ad at, provident eius, totam impedit, cupiditate
+            consequuntur sunt numquam aliquam? Quibusdam, laboriosam quia magnam alias natus corporis dolore.
+        </p>
+    </section>
+</div>
+<script class="navbar-15">
+    const $buttonNavigation = document.querySelector("#header__navigation");
+    const $contentNavigation = document.querySelector(".header__nav");
+    $buttonNavigation.addEventListener("click", () => $contentNavigation.classList.toggle("header__nav--open"));
+</script>

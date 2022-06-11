@@ -1,16 +1,77 @@
-<ul class="accordions-group">
-    <li class="accordion accordion--collapsed">
-        <div class="accordion__header">
-            <h4 class="accordion__title">Primer Grupo de Colapsado</h4>
-            <a class="accordion__icon"><i class="fa-solid fa-angle-up"></i></a>
-        </div>
-        <p class="accordion__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet laudantium, et optio commodi eum perspiciatis vero itaque. Dolore.</p>
-    </li>
-    <li class="accordion">
-        <div class="accordion__header">
-            <h4 class="accordion__title">Primer Grupo de Colapsado</h4>
-            <div class="accordion__icon"><i class="fa-solid fa-angle-up"></i></div>
-        </div>
-        <p class="accordion__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae cumque quisquam officiis aliquid molestiae nemo sed, incidunt at?</p>
-    </li>
-</ul>
+<style class="accordion-collapsed-1">
+    .accordion-collapsed-1 .accordions-group {
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        background-color: #ffffff;
+        width: 100%;
+        list-style: none;
+    }
+    .accordion-collapsed-1 .accordion {
+        height: max-content;
+        padding: 12px 24px;
+        color: #8e8e8e;
+        overflow: visible;
+        transition: overflow 0.3s;
+    }
+    .accordion-collapsed-1 .accordion__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .accordion-collapsed-1 .accordion__title {
+        font-size: 20px;
+    }
+    .accordion-collapsed-1 .accordion__icon {
+        cursor: pointer;
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    .accordion-collapsed-1 .accordion__body {
+        line-height: 1.5;
+        margin-top: 24px;
+    }
+    .accordion-collapsed-1 .accordion--collapsed {
+        height: max-content;
+    }
+    .accordion-collapsed-1 .accordion__body {
+        transition: transform 0.3s, opacity 0.3s;
+        transform-origin: top center;
+    }
+    .accordion-collapsed-1 .accordion--collapsed .accordion__body {
+        display: none;
+    }
+    .accordion-collapsed-1 .accordion--collapsed .accordion__icon {
+        transform: rotate(180deg);
+    }
+</style>
+<div class="accordion-collapsed-1">
+    <ul class="accordions-group">
+        <li class="accordion accordion--collapsed">
+            <div class="accordion__header">
+                <h4 class="accordion__title">Primer Grupo de Colapsado</h4>
+                <a class="accordion__icon"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+            <p class="accordion__body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet laudantium, et optio commodi eum perspiciatis vero itaque. Dolore.
+            </p>
+        </li>
+        <li class="accordion">
+            <div class="accordion__header">
+                <h4 class="accordion__title">Primer Grupo de Colapsado</h4>
+                <div class="accordion__icon"><i class="fa-solid fa-angle-up"></i></div>
+            </div>
+            <p class="accordion__body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae cumque quisquam officiis aliquid molestiae nemo sed, incidunt
+                at?
+            </p>
+        </li>
+    </ul>
+</div>
+<script class="accordion-collapsed-1">
+    const toggleAccordion = (e) => {
+        e.currentTarget.parentElement.classList.toggle("accordion--collapsed");
+    };
+    const accordions_group = document.querySelectorAll(".accordion__header");
+    accordions_group.forEach((accordion) => accordion.addEventListener("click", toggleAccordion));
+</script>

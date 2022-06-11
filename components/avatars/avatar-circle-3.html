@@ -1,26 +1,50 @@
-<section class="avatar">
-    <picture class="avatar__image ">
-        <img
-            src="/assets/image/user-10.jpg"
-            alt="Miguel J Medina"
-        />
-    </picture>
-    <picture class="avatar__image disconnected">
-        <img
-            src="/assets/image/user-20.jpg"
-            alt="Miguel J Medina"
-        />
-    </picture>
-    <picture class="avatar__image ">
-        <img
-            src="/assets/image/user-30.jpg"
-            alt="Miguel J Medina"
-        />
-    </picture>
-    <picture class="avatar__image ">
-        <img
-            src="/assets/image/user-55.jpg"
-            alt="Miguel J Medina"
-        />
-    </picture>
-</section>
+<style class="avatar-circle-3">
+    .avatar-circle-3 .avatar {
+        display: inline-flex;
+        margin-left: 15px;
+    }
+    .avatar-circle-3 .avatar__image {
+        width: 60px;
+        height: 60px;
+        margin-left: -15px;
+        overflow: hidden;
+        position: relative;
+    }
+    .avatar-circle-3 .avatar__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 3px solid #fefefe;
+    }
+    .avatar-circle-3 .avatar__image::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 12px;
+        width: 12px;
+        border: 2px solid #fefefe;
+        background-color: #48bb48;
+        border-radius: 100%;
+    }
+    .avatar-circle-3 .disconnected::before {
+        background-color: #9e9e9e;
+    }
+</style>
+<div class="avatar-circle-3">
+    <section class="avatar">
+        <picture class="avatar__image">
+            <img src="/assets/image/user-10.jpg" alt="Miguel J Medina" />
+        </picture>
+        <picture class="avatar__image disconnected">
+            <img src="/assets/image/user-20.jpg" alt="Miguel J Medina" />
+        </picture>
+        <picture class="avatar__image">
+            <img src="/assets/image/user-30.jpg" alt="Miguel J Medina" />
+        </picture>
+        <picture class="avatar__image">
+            <img src="/assets/image/user-55.jpg" alt="Miguel J Medina" />
+        </picture>
+    </section>
+</div>
