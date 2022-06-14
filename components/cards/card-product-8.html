@@ -1,102 +1,148 @@
-<style class="card-product-8">
-    .card-product-8 .card {
-        width: 300px;
-        font-size: 16px;
-        border-radius: 6px;
-        overflow: hidden;
-        border: 1px solid #e6e6e6;
-        background-color: #fff;
-        color: #6d6767;
-        display: flex;
-        flex-direction: column;
-    }
-    .card-product-8 .card__header {
-        width: 100%;
-        height: 250px;
-    }
-    .card-product-8 .card__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    .card-product-8 .card__body {
-        padding: 12px 24px;
-        display: grid;
-        gap: 12px;
-    }
-    .card-product-8 .card__title {
-        font-size: 20px;
-        font-weight: 700;
-    }
-    .card-product-8 .card__description {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    .card-product-8 .card__tags {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-    .card-product-8 .card__tag {
-        font-size: 12px;
-        background-color: #e6e6e6;
-        padding: 3px 6px;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        gap: 3px;
-    }
-    .card-product-8 .card__footer {
-        border-top: 1px solid #e6e6e6;
-        padding: 14px 20px;
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Title</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                overflow-x: hidden;
+            }
+            main {
+                margin: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        </style>
+        <style>
+            .card {
+                width: 280px;
+                font-size: 16px;
+                border-radius: 6px;
+                overflow: hidden;
+                border: 1px solid #e6e6e6;
+                background-color: #fff;
+                color: #6d6767;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            .card__header {
+                width: 100%;
+                height: 200px;
+            }
+            .card__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .card__body {
+                padding: 12px 24px;
+                display: grid;
+                gap: 12px;
+            }
+            .card__title {
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .card__description {
+                font-size: 14px;
+                line-height: 1.5;
+                margin: 0;
+            }
+            .card__tags {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            .card__tag {
+                font-size: 12px;
+                background-color: #e6e6e6;
+                padding: 3px 6px;
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                gap: 3px;
+            }
+            .card__footer {
+                border-top: 1px solid #e6e6e6;
+                padding: 14px 20px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .card-product-8 .card__avatar {
-        display: inline-flex;
-        margin-left: 15px;
-    }
-    .card-product-8 .card__avatar-image {
-        width: 5rem;
-        height: 5rem;
-        margin-left: -15px;
-        overflow: hidden;
-        position: relative;
-        object-fit: contain;
-        border-radius: 50%;
-        border: 4px solid #fefefe;
-    }
-</style>
-<div class="card-product-8">
-    <div class="card">
-        <div class="card__header">
-            <img class="card__img" src="/assets/image/background-300x200.jpg" />
-        </div>
-        <div class="card__body">
-            <h3 class="card__title">Titulo de la tarjeta</h3>
-            <p class="card__description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s.
-            </p>
-            <div class="card__tags">
-                <span class="card__tag">HTML <i class="fa-brands fa-html5"></i></span>
-                <span class="card__tag">CSS <i class="fa-brands fa-css3"></i></span>
-                <span class="card__tag">JavaScript <i class="fa-brands fa-js-square"></i></span>
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .card__left {
+                display: inline-flex;
+                flex-direction: row-reverse;
+                margin-left: 15px;
+            }
+            .card__left-image {
+                width: 50px;
+                height: 50px;
+                margin-left: -15px;
+                overflow: hidden;
+                position: relative;
+                object-fit: contain;
+                border-radius: 50%;
+                border: 4px solid #fefefe;
+            }
+            .card__right {
+                display: flex;
+                align-items: center;
+                fill: #6d6767;
+                gap: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <div class="card__header">
+                    <img class="card__img" src="/assets/image/background-300x200.jpg" />
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">Titulo de la tarjeta</h3>
+                    <p class="card__description">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s.
+                    </p>
+                    <div class="card__tags">
+                        <span class="card__tag">HTML</span>
+                        <span class="card__tag">CSS</span>
+                        <span class="card__tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="card__left">
+                        <img class="card__left-image" src="/assets/image/user-10.jpg" alt="Miguel J Medina" />
+                        <img class="card__left-image" src="/assets/image/user-20.jpg" alt="Miguel J Medina" />
+                        <img class="card__left-image" src="/assets/image/user-30.jpg" alt="Miguel J Medina" />
+                    </div>
+                    <div class="card__right">
+                        <span class="card__right-icon">
+                            <svg width="20" height="20" viewBox="0 0 46 46">
+                                <path
+                                    d="M2.875 8.1875C2.875 7.63522 3.32272 7.1875 3.875 7.1875H9.34174C9.77217 7.1875 10.1543 7.46293 10.2904 7.87127L11.2721 10.8162C11.4082 11.2246 11.7903 11.5 12.2208 11.5H41.8158C42.4751 11.5 42.954 12.127 42.7805 12.7631L39.0135 26.5756C38.8948 27.0107 38.4997 27.3125 38.0487 27.3125H17.8904C17.5651 27.3125 17.3264 27.6182 17.4053 27.9338L17.8741 29.8088C17.9297 30.0314 18.1297 30.1875 18.3591 30.1875H36.7063C37.3889 30.1875 37.8708 30.8562 37.655 31.5037L36.8221 34.0025C36.7182 34.314 36.7826 34.6523 36.9396 34.9407C37.2172 35.4505 37.375 36.035 37.375 36.6562C37.375 38.641 35.766 40.25 33.7812 40.25C31.7965 40.25 30.1875 38.641 30.1875 36.6562C30.1875 35.9907 30.3684 35.3674 30.6838 34.8328C30.7676 34.6908 30.6705 34.5 30.5056 34.5H19.8069C19.642 34.5 19.5449 34.6908 19.6287 34.8328C19.9441 35.3674 20.125 35.9907 20.125 36.6562C20.125 38.641 18.516 40.25 16.5312 40.25C14.5465 40.25 12.9375 38.641 12.9375 36.6562C12.9375 35.7944 13.2409 35.0034 13.7466 34.3843C14.0012 34.0727 14.1332 33.6617 14.0129 33.2777L7.40718 12.2009C7.27646 11.7839 6.89003 11.5 6.45295 11.5H3.875C3.32272 11.5 2.875 11.0523 2.875 10.5V8.1875Z"
+                                />
+                            </svg>
+                        </span>
+                        <span class="card__right-text">152 USD</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card__footer">
-            <div class="card__avatar">
-                <img class="card__avatar-image" src="/assets/image/user-10.jpg" alt="Miguel J Medina" />
-                <img class="card__avatar-image" src="/assets/image/user-20.jpg" alt="Miguel J Medina" />
-                <img class="card__avatar-image" src="/assets/image/user-30.jpg" alt="Miguel J Medina" />
-            </div>
-            <div class="card__right">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>152 USD</span>
-            </div>
-        </div>
-    </div>
-</div>
+        </main>
+    </body>
+</html>

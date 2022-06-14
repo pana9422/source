@@ -1,35 +1,77 @@
-<style class="badge-4">
-    .badge-4 .badge {
-        position: relative;
-        display: flex;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: #3b3b3b;
-    }
-    .badge-4 .badge__text {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Badge</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                overflow-x: hidden;
+            }
+            main {
+                margin: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        </style>
+        <style>
+            .badge {
+                position: relative;
+                display: flex;
+                width: 50px;
+                height: 50px;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: #3b3b3b;
+            }
+            .badge__icon svg{
+                fill: #3b3b3b;
+            }
+            .badge__text {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
 
-        font-size: 12px;
-        color: #e6e6e6;
-        background-color: #1d73e4;
-        padding: 0.1em 0.6em;
+                font-size: 12px;
+                color: #e6e6e6;
+                background-color: #1d73e4;
+                padding: 0.1em 0.4em;
 
-        cursor: pointer;
-        white-space: nowrap;
-        border-radius: 6px;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-</style>
-<div class="badge-4">
-    <div class="badge">
-        <span class="badge__text">+99</span>
-        <span class="badge__icon"><i class="fa-solid fa-bell"></i></span>
-    </div>
-</div>
+                cursor: pointer;
+                white-space: nowrap;
+                border-radius: 6px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="badge">
+                <span class="badge__text">+99</span>
+                <span class="badge__icon">
+                    <svg width="16" height="16" viewBox="0 0 46 46" >
+                        <path
+                            d="M26.8812 39.5312C27.1194 39.5312 27.3157 39.7255 27.2819 39.9613C27.027 41.7433 25.2071 43.125 23 43.125C20.7929 43.125 18.973 41.7433 18.7181 39.9613C18.6843 39.7255 18.8806 39.5312 19.1187 39.5312H26.8812Z"
+                        />
+                        <path
+                            d="M43.097 37.0339L42.4519 33.81C42.3636 33.3692 42.071 32.9943 41.6608 32.7967L39.9783 31.986C39.6035 31.8054 39.3252 31.4759 39.2133 31.0806L37.2305 24.0751C37.2084 23.9967 37.193 23.9165 37.1846 23.8355L36.4665 16.9164C36.4665 9.93018 32.0964 5.32464 25.3571 4.46025C24.9811 3.53146 24.0587 2.875 22.9804 2.875C21.9031 2.875 20.9815 3.53022 20.6047 4.45763C14.7211 5.18938 9.62273 8.71252 9.62273 15.5778L8.90371 23.8237C8.89596 23.9125 8.87983 24.0005 8.85552 24.0864L6.876 31.0806C6.76409 31.4759 6.48571 31.8054 6.111 31.986L4.41093 32.8051C4.01068 32.9979 3.72177 33.3599 3.62631 33.7881L2.90949 37.0037C2.71005 37.8984 3.40073 38.746 4.33186 38.7491L22.9804 38.8125L41.6682 38.749C42.5865 38.7459 43.2744 37.9202 43.097 37.0339Z"
+                        />
+                    </svg>
+                </span>
+            </div>
+        </main>
+    </body>
+</html>

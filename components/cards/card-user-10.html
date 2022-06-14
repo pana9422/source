@@ -1,87 +1,135 @@
-<style class="card-user-10">
-    .card-user-10 .card {
-        width: 300px;
-        font-size: 16px;
-        border-radius: 6px;
-        overflow: hidden;
-        border: 1px solid #e6e6e6;
-        background-color: #fff;
-        color: #6d6767;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 18px;
-        gap: 20px;
-    }
-    .card-user-10 .card__picture {
-        width: 100%;
-        height: 140px;
-        background-image: url(/assets/image/background-300x200.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-    .card-user-10 .card__country-flag {
-        width: 20px;
-        height: 20px;
-    }
-    .card-user-10 .card__avatar {
-        display: inline-block;
-        border-radius: 50%;
-        position: relative;
-        top: 70px;
-        left: 0;
-    }
-    .card-user-10 .card__avatar-image {
-        width: 125px;
-        height: 125px;
-        border: 0.5rem solid var(--white);
-        border-radius: 50%;
-        font-size: inherit;
-    }
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Title</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                overflow-x: hidden;
+            }
+            main {
+                margin: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        </style>
+        <style>
+            .card {
+                width: 280px;
+                height: auto;
+                font-size: 16px;
+                border-radius: 6px;
+                overflow: hidden;
+                border: 1px solid #e6e6e6;
+                background-color: #fff;
+                color: #6d6767;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 18px;
+                gap: 20px;
+            }
+            .card__picture {
+                width: 100%;
+                height: 140px;
+                background-image: url(/assets/image/background-300x200.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+            }
+            .card__country-flag {
+                width: 20px;
+                height: 20px;
+            }
+            .card__avatar {
+                display: inline-block;
+                border-radius: 50%;
+                position: relative;
+                top: 70px;
+                left: 0;
+            }
+            .card__avatar-image {
+                width: 125px;
+                height: 125px;
+                border: 5px solid #fff;
+                border-radius: 50%;
+                font-size: inherit;
+            }
 
-    .card-user-10 .card__about {
-        margin-top: 50px;
-    }
+            .card__about {
+                margin-top: 50px;
+            }
 
-    .card-user-10 .card__name {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
+            .card__name {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
 
-    .card-user-10 .card__links {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-    .card-user-10 .card__link {
-        padding: 6px;
-        color: #6d6767;
-        font-size: 18px;
-    }
-</style>
-<div class="card-user-10">
-    <div class="card">
-        <div class="card__picture">
-            <figure class="card__avatar">
-                <img class="card__avatar-image" src="/assets/image/user-55.jpg" alt="Miguel J Medina" />
-            </figure>
-        </div>
-        <div class="card__about">
-            <div class="card__name">
-                <img class="card__country-flag" src="/assets/image/flag-peru.png" alt="" />
-                <span class="card__title">Miguel J Medina</span>
+            .card__links {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            .card__link {
+                padding: 6px;
+                color: #6d6767;
+                font-size: 18px;
+                fill: currentColor;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <div class="card__picture">
+                    <figure class="card__avatar">
+                        <img class="card__avatar-image" src="/assets/image/user-55.jpg" alt="Miguel J Medina" />
+                    </figure>
+                </div>
+                <div class="card__about">
+                    <div class="card__name">
+                        <img class="card__country-flag" src="/assets/image/flag-peru.png" alt="" />
+                        <span class="card__title">Miguel J Medina</span>
+                    </div>
+                    <p class="card__description">Coordinador & UI Design</p>
+                </div>
+                <div class="card__links">
+                    <a class="card__link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 46 46">
+                            <path
+                                d="M29.7083 23C29.7083 26.7049 26.7049 29.7083 23 29.7083C19.2951 29.7083 16.2917 26.7049 16.2917 23C16.2917 19.2951 19.2951 16.2917 23 16.2917C26.7049 16.2917 29.7083 19.2951 29.7083 23Z"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M34.7396 43.125C39.3707 43.125 43.125 39.3707 43.125 34.7396V11.2604C43.125 6.62928 39.3707 2.875 34.7396 2.875H11.2604C6.62928 2.875 2.875 6.62928 2.875 11.2604V34.7396C2.875 39.3707 6.62928 43.125 11.2604 43.125H34.7396ZM34.7396 23C34.7396 29.4836 29.4836 34.7396 23 34.7396C16.5164 34.7396 11.2604 29.4836 11.2604 23C11.2604 16.5164 16.5164 11.2604 23 11.2604C29.4836 11.2604 34.7396 16.5164 34.7396 23ZM23 29.7083C26.7049 29.7083 29.7083 26.7049 29.7083 23C29.7083 19.2951 26.7049 16.2917 23 16.2917C19.2951 16.2917 16.2917 19.2951 16.2917 23C16.2917 26.7049 19.2951 29.7083 23 29.7083ZM37.2552 11.2604C38.6445 11.2604 39.7708 10.1341 39.7708 8.74479C39.7708 7.35545 38.6445 6.22917 37.2552 6.22917C35.8659 6.22917 34.7396 7.35545 34.7396 8.74479C34.7396 10.1341 35.8659 11.2604 37.2552 11.2604Z"
+                            />
+                        </svg>
+                    </a>
+                    <a class="card__link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 46 46">
+                            <path
+                                d="M18.4524 43.125C18.6376 43.125 18.7878 42.9748 18.7878 42.7896V29.4197C18.7878 29.2345 18.6376 29.0843 18.4524 29.0843H13.5069C13.3217 29.0843 13.1715 28.9341 13.1715 28.7489V23.8034C13.1715 23.6182 13.3217 23.468 13.5069 23.468H18.4524C18.6376 23.468 18.7878 23.3179 18.7878 23.1326V17.9102C18.7878 13.7422 22.1666 10.3634 26.3347 10.3634H31.557C31.7423 10.3634 31.8924 10.5135 31.8924 10.6988V14.8046C31.8924 14.9366 31.7854 15.0436 31.6535 15.0436C28.6837 15.0436 26.2762 17.4511 26.2762 20.4209V23.1326C26.2762 23.3179 26.4263 23.468 26.6116 23.468H31.4965C31.7038 23.468 31.8614 23.6541 31.8273 23.8586L31.0031 28.804C30.9762 28.9658 30.8362 29.0843 30.6723 29.0843H26.6116C26.4263 29.0843 26.2762 29.2345 26.2762 29.4197V42.7896C26.2762 42.9748 26.4263 43.125 26.6116 43.125H41.4479C42.3741 43.125 43.125 42.3741 43.125 41.4479V4.55208C43.125 3.62586 42.3741 2.875 41.4479 2.875H4.55208C3.62586 2.875 2.875 3.62586 2.875 4.55208V41.4479C2.875 42.3741 3.62586 43.125 4.55208 43.125H18.4524Z"
+                            />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <p class="card__description">Coordinador & UI Design</p>
-        </div>
-        <div class="card__links">
-            <a class="card__link" href="#"><i class="fa-brands fa-github"></i></a>
-            <a class="card__link" href="#"><i class="fa-brands fa-codepen"></i></a>
-            <a class="card__link" href="#"><i class="fa-brands fa-linkedin"></i> </a>
-            <a class="card__link" href="#"><i class="fa-solid fa-earth-americas"></i></a>
-        </div>
-    </div>
-</div>
+        </main>
+    </body>
+</html>
