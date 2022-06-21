@@ -1,97 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Alert Info</title>
-        <style>
-            .alert {
-                background-color: #2f8de7;
-                color: #ebf5ff;
-                padding: 12px 24px;
-                border-radius: 6px;
-
-                border: 1px solid #2f8de7;
-                font-size: 16px;
-
-                display: flex;
-                gap: 12px;
-                max-width: 600px;
-                width: 100%;
-            }
-            .alert__callout {
-                position: relative;
-                display: block;
-                width: 5px;
-                min-width: 5px;
-                background-color: currentColor;
-                border-radius: 6px;
-            }
-            .alert__body {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-            }
-            .alert__header {
-                display: flex;
-                gap: 12px;
-                width: 100%;
-            }
-            .alert__icon svg{
-                fill: #ebf5ff;
-            }
-            .alert__title {
-                flex-grow: 1;
-                font-weight: 700;
-            }
-            .alert__closed {
-                border: none;
-                cursor: pointer;
-                fill: #ebf5ff;
-                opacity: 0.75;
-                background-color: transparent;
-
-                transition: opacity 0.3s;
-            }
-            .alert__closed:hover {
-                opacity: 1;
-            }
-            .alert__content {
-                flex-grow: 1;
-                width: 100%;
-            }
-            .alert__content p{
-                margin: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="alert p-0 bg-amber-400 border-amber-300 text-amber-700">
-                <div class="alert__body gap-0">
-                    <div class="alert__header px-15 py-10">
-                        <span class="alert__icon">
-                            <svg width="24" height="24" viewBox="0 0 46 46">
-                                <path
-                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                />
-                            </svg>
-                        </span>
-                        <span class="alert__title">Titulo de mi alerta</span>
-                        <button class="alert__closed">
-                            <svg width="12" height="12" viewBox="0 0 46 46">
-                                <path
-                                    d="M42.4179 35.2665C42.8084 35.657 42.8084 36.2902 42.4179 36.6807L36.6807 42.4179C36.2902 42.8084 35.657 42.8084 35.2665 42.4179L23.7413 30.8927C23.3515 30.5029 22.7199 30.502 22.329 30.8907L10.7335 42.4218C10.3426 42.8105 9.71099 42.8096 9.32123 42.4199L3.58211 36.6807C3.19158 36.2902 3.19158 35.657 3.58211 35.2665L15.1415 23.7071C15.532 23.3166 15.532 22.6834 15.1415 22.2929L3.58211 10.7335C3.19158 10.343 3.19158 9.70979 3.58211 9.31927L9.31927 3.58211C9.70979 3.19158 10.343 3.19158 10.7335 3.58211L22.2929 15.1415C22.6834 15.532 23.3166 15.532 23.7071 15.1415L35.2665 3.58211C35.657 3.19158 36.2902 3.19158 36.6807 3.58211L42.4179 9.31927C42.8084 9.70979 42.8084 10.343 42.4179 10.7335L30.8585 22.2929C30.468 22.6834 30.468 23.3166 30.8585 23.7071L42.4179 35.2665Z"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="alert__content">
-                        <p>Este es el primer contenido generado por LayBlu UI Components</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </body>
-</html>
+<div class="alert p-0 bg-amber-400 border-amber-300 text-amber-700">
+    <div class="alert__body gap-0">
+        <div class="alert__header px-15 py-10">
+            <span class="alert__icon">
+                <svg width="24" height="24" viewBox="0 0 46 46">
+                    <path
+                        d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                    />
+                </svg>
+            </span>
+            <span class="alert__title">Titulo de mi alerta</span>
+            <button class="alert__closed">
+                <svg width="12" height="12" viewBox="0 0 46 46">
+                    <path
+                        d="M42.4179 35.2665C42.8084 35.657 42.8084 36.2902 42.4179 36.6807L36.6807 42.4179C36.2902 42.8084 35.657 42.8084 35.2665 42.4179L23.7413 30.8927C23.3515 30.5029 22.7199 30.502 22.329 30.8907L10.7335 42.4218C10.3426 42.8105 9.71099 42.8096 9.32123 42.4199L3.58211 36.6807C3.19158 36.2902 3.19158 35.657 3.58211 35.2665L15.1415 23.7071C15.532 23.3166 15.532 22.6834 15.1415 22.2929L3.58211 10.7335C3.19158 10.343 3.19158 9.70979 3.58211 9.31927L9.31927 3.58211C9.70979 3.19158 10.343 3.19158 10.7335 3.58211L22.2929 15.1415C22.6834 15.532 23.3166 15.532 23.7071 15.1415L35.2665 3.58211C35.657 3.19158 36.2902 3.19158 36.6807 3.58211L42.4179 9.31927C42.8084 9.70979 42.8084 10.343 42.4179 10.7335L30.8585 22.2929C30.468 22.6834 30.468 23.3166 30.8585 23.7071L42.4179 35.2665Z"
+                    />
+                </svg>
+            </button>
+        </div>
+        <div class="alert__content">
+            <p>Este es el primer contenido generado por LayBlu UI Components</p>
+        </div>
+    </div>
+</div>
