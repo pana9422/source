@@ -1,150 +1,28 @@
+<button class="btn btn--s btn--dropdown">
+	<span class="btn__icon">
+		<svg width="16" height="16" viewBox="0 0 46 46">
+			<path d="M2.875 42.125C2.875 42.6773 3.32272 43.125 3.875 43.125H42.125C42.6773 43.125 43.125 42.6773 43.125 42.125V29.0312C43.125 28.479 42.6773 28.0312 42.125 28.0312H39.0938C38.5415 28.0312 38.0938 28.479 38.0938 29.0312L38.0938 37.0937C38.0938 37.646 37.646 38.0938 37.0938 38.0938H8.90625C8.35397 38.0938 7.90625 37.646 7.90625 37.0938V8.90625C7.90625 8.35396 8.35397 7.90625 8.90625 7.90625L16.9688 7.90625C17.521 7.90625 17.9688 7.45854 17.9688 6.90625V3.875C17.9688 3.32272 17.521 2.875 16.9688 2.875H3.875C3.32272 2.875 2.875 3.32272 2.875 3.875L2.875 42.125Z"/>
+			<path d="M36.3866 13.171C37.0166 12.541 38.0937 12.9872 38.0937 13.8781V22C38.0937 22.5523 38.5415 23 39.0937 23H42.125C42.6773 23 43.125 22.5523 43.125 22L43.125 3.875C43.125 3.32272 42.6773 2.875 42.125 2.875H24C23.4477 2.875 23 3.32272 23 3.875V6.90625C23 7.45854 23.4477 7.90625 24 7.90625H32.1219C33.0128 7.90625 33.459 8.98339 32.829 9.61336L20.1495 22.2929C19.7589 22.6834 19.7589 23.3166 20.1495 23.7071L22.2929 25.8505C22.6834 26.2411 23.3166 26.2411 23.7071 25.8505L36.3866 13.171Z"/>
+		</svg>
+			
+	</span>
+	<span class="btn__txt">Button & icon</span>
+	<span class="btn__arrow">
+		
+		<svg width="16" height="16" viewBox="0 0 46 46">
+			<path d="M41.4179 14.6446C42.0479 14.0146 41.6017 12.9375 40.7108 12.9375H5.28921C4.39831 12.9375 3.95214 14.0146 4.58211 14.6446L22.2929 32.3554C22.6834 32.7459 23.3166 32.7459 23.7071 32.3554L41.4179 14.6446Z"/>
+		</svg>
+	</span>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dropdown</title>
-		<style>
-			.btn {
-				--font-size: 16px;
-				--line-height: 1.5;
-
-				font-size: var(--font-size);	
-				line-height: var(--line-height);
-				width: max-content;
-				outline: none;
-				padding: .375em 0.75em;
-				border-radius: 6px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: .75em;
-				cursor:pointer;
-				border: 1px solid;
-				border-color: currentColor;
-				transition: opacity .3s, background-color .3s;
-			}
-			.btn--s{
-				background-color: #2589e7;
-				border-color: #2589e7;
-				color: #ebebeb;
-			}
-			.btn__icon{
-				width: var(--font-size);
-				line-height: var(--line-height);
-				fill: currentColor;
-				display: flex;
-				align-items: center;
-			}
-			.btn--dropdown {
-				position: relative;
-				justify-content: space-between;
-			}
-			.btn__txt {
-				flex-grow: 2;
-				text-align: start;
-			}
-			.btn__arrow {
-				transition: transform .6s;
-				fill: currentColor;
-				display: flex;
-				align-items: center;
-			}
-			.btn__arrow--up {
-				transform: rotate(-180deg);
-			}
-			.btn--s:hover, 
-			.btn--s:active,
-			.btn--s.dropdown-opened  {
-				background-color: #1774ca;
-			}
-			.btn__dropdown {
-				min-width: 85%;
-				padding: 6px 0;
-				background-color: #fff;
-				box-shadow: 0 0 5px 2px #5e5e5e33;
-				border-radius: 6px;
-				position: absolute;
-				z-index: 1;
-				top: 120%; right: 0;
-				transform-origin: top center;
-				transform: scaleY(0);
-				opacity: 0;
-				transition: transform .6s, opacity .6s;
-				list-style: none;
-			}
-			.btn__dropdown--unfolded {
-				opacity: 1;	
-				transform: scaleY(1);
-			}
-			.btn__link {
-				display: block;
-				width: 100%;
-				padding: 6px 12px;
-				color: #777777;
-				text-align: left;
-				transition: background-color .6;
-				text-decoration: none;
-			}
-			.btn__link:active,
-			.btn__link:hover {
-				background-color: #f3f3f3;
-				color: #333;
-			}
-			.btn--small {
-				font-size: .8rem;
-			}
-			.btn--big {
-				font-size: var(--font-size-xl);
-			}
-		</style>
-    </head>
-    <body>
-        <main>
-				<button class="btn btn--s btn--dropdown">
-					<span class="btn__icon">
-						<svg width="16" height="16" viewBox="0 0 46 46">
-							<path d="M2.875 42.125C2.875 42.6773 3.32272 43.125 3.875 43.125H42.125C42.6773 43.125 43.125 42.6773 43.125 42.125V29.0312C43.125 28.479 42.6773 28.0312 42.125 28.0312H39.0938C38.5415 28.0312 38.0938 28.479 38.0938 29.0312L38.0938 37.0937C38.0938 37.646 37.646 38.0938 37.0938 38.0938H8.90625C8.35397 38.0938 7.90625 37.646 7.90625 37.0938V8.90625C7.90625 8.35396 8.35397 7.90625 8.90625 7.90625L16.9688 7.90625C17.521 7.90625 17.9688 7.45854 17.9688 6.90625V3.875C17.9688 3.32272 17.521 2.875 16.9688 2.875H3.875C3.32272 2.875 2.875 3.32272 2.875 3.875L2.875 42.125Z"/>
-							<path d="M36.3866 13.171C37.0166 12.541 38.0937 12.9872 38.0937 13.8781V22C38.0937 22.5523 38.5415 23 39.0937 23H42.125C42.6773 23 43.125 22.5523 43.125 22L43.125 3.875C43.125 3.32272 42.6773 2.875 42.125 2.875H24C23.4477 2.875 23 3.32272 23 3.875V6.90625C23 7.45854 23.4477 7.90625 24 7.90625H32.1219C33.0128 7.90625 33.459 8.98339 32.829 9.61336L20.1495 22.2929C19.7589 22.6834 19.7589 23.3166 20.1495 23.7071L22.2929 25.8505C22.6834 26.2411 23.3166 26.2411 23.7071 25.8505L36.3866 13.171Z"/>
-							</svg>
-							
-					</span>
-					<span class="btn__txt">Button & icon</span>
-					<span class="btn__arrow">
-						
-						<svg width="16" height="16" viewBox="0 0 46 46">
-							<path d="M41.4179 14.6446C42.0479 14.0146 41.6017 12.9375 40.7108 12.9375H5.28921C4.39831 12.9375 3.95214 14.0146 4.58211 14.6446L22.2929 32.3554C22.6834 32.7459 23.3166 32.7459 23.7071 32.3554L41.4179 14.6446Z"/>
-							</svg>
-							
-							
-					</span>
-				
-					<ul class="btn__dropdown">
-						<li class="btn__item">
-							<a class="btn__link" href="#">Option one of selected</a>
-						</li>
-						<li class="btn__item">
-							<a class="btn__link" href="#">Option two</a>
-						</li>
-						<li class="btn__item">
-							<a class="btn__link" href="#">Option three</a>
-						</li>
-					<ul>
-				</button>
-        </main>
-				<script>
-					const btnDropdown = document.querySelector('.btn--dropdown');
-					const dropdownList = document.querySelector('.btn--dropdown .btn__dropdown');
-				
-					// Functions
-					const toggleState = () => {
-					btnDropdown.classList.toggle('dropdown-opened');
-					dropdownList.classList.toggle('btn__dropdown--unfolded');
-					}
-				
-					// Code execution
-					btnDropdown.addEventListener('click', toggleState);
-				</script>
-    </body>
-</html>
+	<ul class="btn__dropdown">
+		<li class="btn__item">
+			<a class="btn__link" href="#">Option one of selected</a>
+		</li>
+		<li class="btn__item">
+			<a class="btn__link" href="#">Option two</a>
+		</li>
+		<li class="btn__item">
+			<a class="btn__link" href="#">Option three</a>
+		</li>
+	<ul>
+</button>

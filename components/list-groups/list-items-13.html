@@ -1,93 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>List Items</title>
-
-        <style>
-            .list-item {
-                display: flex;
-                flex-direction: column;
-                font-size: 16px;
-                gap: 6px;
-                width: 100%;
-                max-width: 400px;
-            }
-            .list-item__header {
-                display: block;
-                line-height: 1.3;
-                font-weight: 700;
-
-                color: #565c68;
-                padding: 6px 12px;
-            }
-            .list-item__content {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-            .list-item__link {
-                font-weight: 400;
-                line-height: 1.5;
-                padding: 0.375em 0.75em;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 6px;
-                color: #565c68;
-                cursor: pointer;
-                text-decoration: none;
-                transition: color 0.5s;
-            }
-            .list-item__link:hover {
-                color: #3a3e46;
-            }
-            .list-item__icon-left {
-                width: 20px;
-                text-align: left;
-                vertical-align: middle;
-                font-size: 0.8em;
-                fill: currentColor;
-            }
-            .list-item__text {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-            }
-            .list-item__badge {
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-
-                font-size: 0.75em;
-                color: #e6e6e6;
-                background-color: #e41d37;
-                padding: 0.1em 0.6em;
-
-                cursor: pointer;
-                white-space: nowrap;
-                border-radius: 6px;
-            }
-            .list-item__dropdown {
-                margin-left: 24px;
-                overflow: hidden;
-                height: auto;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="list-item">
-                <span class="list-item__header">Lista del aside</span>
+<div class="list-item">
+    <span class="list-item__header">Lista del aside</span>
+    <ul class="list-item__content">
+        <li class="list-item__item">
+            <a class="list-item__link" href="#">
+                <span class="list-item__icon-left">
+                    <svg width="16" height="16" viewBox="0 0 46 46">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                        />
+                    </svg>
+                </span>
+                <span class="list-item__text">1. Primera Opcion</span>
+                <span class="list-item__icon-right"> <small class="list-item__badge">+99</small> </span>
+            </a>
+            <div class="list-item__dropdown">
                 <ul class="list-item__content">
                     <li class="list-item__item">
                         <a class="list-item__link" href="#">
-                            <span class="list-item__icon-left">
-                                <svg width="16" height="16" viewBox="0 0 46 46">
+                            <span class="list-item__icon-left"
+                                ><svg width="16" height="16" viewBox="0 0 46 46">
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
@@ -95,55 +28,8 @@
                                     />
                                 </svg>
                             </span>
-                            <span class="list-item__text">1. Primera Opcion</span>
-                            <span class="list-item__icon-right"> <small class="list-item__badge">+99</small> </span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
                         </a>
-                        <div class="list-item__dropdown">
-                            <ul class="list-item__content">
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="list-item__item">
                         <a class="list-item__link" href="#">
@@ -156,56 +42,9 @@
                                     />
                                 </svg>
                             </span>
-                            <span class="list-item__text">2. Segunda Opacion</span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
                         </a>
-                        <div class="list-item__dropdown">
-                            <ul class="list-item__content">
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                                <li class="list-item__item">
-                                    <a class="list-item__link" href="#">
-                                        <span class="list-item__icon-left"
-                                            ><svg width="16" height="16" viewBox="0 0 46 46">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="list-item__text">Opciones de primer nivel</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
-
                     <li class="list-item__item">
                         <a class="list-item__link" href="#">
                             <span class="list-item__icon-left"
@@ -217,26 +56,101 @@
                                     />
                                 </svg>
                             </span>
-                            <span class="list-item__text">3. Opciones de primer nivel</span>
-                        </a>
-                    </li>
-
-                    <li class="list-item__item">
-                        <a class="list-item__link" href="#">
-                            <span class="list-item__icon-left"
-                                ><svg width="16" height="16" viewBox="0 0 46 46">
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
-                                    />
-                                </svg>
-                            </span>
-                            <span class="list-item__text">4. Opciones de primer nivel</span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
                         </a>
                     </li>
                 </ul>
             </div>
-        </main>
-    </body>
-</html>
+        </li>
+        <li class="list-item__item">
+            <a class="list-item__link" href="#">
+                <span class="list-item__icon-left"
+                    ><svg width="16" height="16" viewBox="0 0 46 46">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                        />
+                    </svg>
+                </span>
+                <span class="list-item__text">2. Segunda Opacion</span>
+            </a>
+            <div class="list-item__dropdown">
+                <ul class="list-item__content">
+                    <li class="list-item__item">
+                        <a class="list-item__link" href="#">
+                            <span class="list-item__icon-left"
+                                ><svg width="16" height="16" viewBox="0 0 46 46">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
+                        </a>
+                    </li>
+                    <li class="list-item__item">
+                        <a class="list-item__link" href="#">
+                            <span class="list-item__icon-left"
+                                ><svg width="16" height="16" viewBox="0 0 46 46">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
+                        </a>
+                    </li>
+                    <li class="list-item__item">
+                        <a class="list-item__link" href="#">
+                            <span class="list-item__icon-left"
+                                ><svg width="16" height="16" viewBox="0 0 46 46">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="list-item__text">Opciones de primer nivel</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="list-item__item">
+            <a class="list-item__link" href="#">
+                <span class="list-item__icon-left"
+                    ><svg width="16" height="16" viewBox="0 0 46 46">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                        />
+                    </svg>
+                </span>
+                <span class="list-item__text">3. Opciones de primer nivel</span>
+            </a>
+        </li>
+
+        <li class="list-item__item">
+            <a class="list-item__link" href="#">
+                <span class="list-item__icon-left"
+                    ><svg width="16" height="16" viewBox="0 0 46 46">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23 43.125C34.1147 43.125 43.125 34.1147 43.125 23C43.125 11.8853 34.1147 2.875 23 2.875C11.8853 2.875 2.875 11.8853 2.875 23C2.875 34.1147 11.8853 43.125 23 43.125ZM32.0744 13.9938L33.5222 15.4794C34.0662 16.0376 34.0662 16.9277 33.5222 17.486L20.772 30.5687C20.2078 31.1476 19.2773 31.1476 18.7131 30.5687L12.4778 24.1708C11.9338 23.6126 11.9338 22.7225 12.4778 22.1642L13.9256 20.6787C14.4898 20.0997 15.4203 20.0997 15.9845 20.6787L18.7131 23.4783C19.2773 24.0573 20.2078 24.0573 20.772 23.4783L30.0155 13.9938C30.5797 13.4149 31.5102 13.4149 32.0744 13.9938Z"
+                        />
+                    </svg>
+                </span>
+                <span class="list-item__text">4. Opciones de primer nivel</span>
+            </a>
+        </li>
+    </ul>
+</div>

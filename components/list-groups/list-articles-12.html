@@ -1,137 +1,44 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>List Articles</title>
-        <style>
-            .list-article {
-                max-width: 600px;
-                display: flex;
-                flex-direction: column;
-                font-size: 16px;
-                gap: 0.6rem;
-            }
-            .list-article__header {
-                display: block;
-                font-size: 16px;
-                line-height: 1.3;
-                font-weight: 700;
-
-                color: #636469;
-                padding: 6px 12px;
-            }
-            .list-article__content{
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-            .list-article__item {
-                width: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-            }
-            .list-article__link {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 6px;
-                padding: 12px;
-                width: 100%;
-                height: 100%;
-                text-decoration: none;
-                transition: background-color 0.3s;
-            }
-            .list-article__link--active,
-            .list-article__link:hover {
-                background-color: #eaeaee;
-            }
-            .list-article__figure {
-                min-width: 64px;
-                width: 64px;
-                height: 64px;
-                margin: 0;
-            }
-            .list-article__image {
-                width: 100%;
-                height: 100%;
-                border-radius: 6px;
-                overflow: hidden;
-            }
-            .list-article__text {
-                display: flex;
-                flex-direction: column;
-            }
-            .list-article__title {
-                line-height: 1.5;
-                font-weight: 700;
-                color: #636469;
-
-                display: -webkit-box;
-                -webkit-line-clamp: 1;
-                -webkit-box-orient: vertical;
-
-                overflow: hidden;
-            }
-            .list-article__description {
-                line-height: 1.5;
-
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-
-                color: #8f9099;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="list-article">
-                <div class="list-article__header">Lista del article</div>
-                <ul class="list-article__content">
-                    <li class="list-article__item">
-                        <a class="list-article__link list-article__link--active" href="#">
-                            <figure class="list-article__figure">
-                                <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
-                            </figure>
-                            <span class="list-article__text">
-                                <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
-                                <span class="list-article__description"
-                                    >Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto</span
-                                >
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-article__item">
-                        <a class="list-article__link" href="#">
-                            <figure class="list-article__figure">
-                                <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
-                            </figure>
-                            <span class="list-article__text">
-                                <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
-                                <span class="list-article__description"
-                                    >Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto</span
-                                >
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-article__item">
-                        <a class="list-article__link" href="#">
-                            <figure class="list-article__figure">
-                                <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
-                            </figure>
-                            <span class="list-article__text">
-                                <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
-                                <span class="list-article__description">
-                                    Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </main>
-    </body>
-</html>
+<div class="list-article">
+    <div class="list-article__header">Lista del article</div>
+    <ul class="list-article__content">
+        <li class="list-article__item">
+            <a class="list-article__link list-article__link--active" href="#">
+                <figure class="list-article__figure">
+                    <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
+                </figure>
+                <span class="list-article__text">
+                    <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
+                    <span class="list-article__description"
+                        >Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto</span
+                    >
+                </span>
+            </a>
+        </li>
+        <li class="list-article__item">
+            <a class="list-article__link" href="#">
+                <figure class="list-article__figure">
+                    <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
+                </figure>
+                <span class="list-article__text">
+                    <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
+                    <span class="list-article__description"
+                        >Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto</span
+                    >
+                </span>
+            </a>
+        </li>
+        <li class="list-article__item">
+            <a class="list-article__link" href="#">
+                <figure class="list-article__figure">
+                    <img class="list-article__image" src="/assets/image/user-30.jpg" alt="" />
+                </figure>
+                <span class="list-article__text">
+                    <span class="list-article__title">Titulo del articulo generado para aplicar la propiedad text-overflow</span>
+                    <span class="list-article__description">
+                        Descripcion del articulo, pero solo deven aparecer 2 lineas, y el resto debe estar oculto
+                    </span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

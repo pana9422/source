@@ -1,66 +1,14 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Breadcrumb</title>
-        <style>
-            .breadcrumb {
-                --opacity: 0.6;
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                color: #2366be;
-                padding: 6px;
-            }
-            .breadcrumb__item {
-                align-items: center;
-                display: flex;
-                gap: 12px;
-                color: inherit;
-            }
-            .breadcrumb__item::after {
-                content: "/";
-                font-weight: 900;
-                opacity: var(--opacity);
-            }
-            .breadcrumb__item:last-child::after {
-                content: "";
-            }
-            .breadcrumb__link {
-                opacity: var(--opacity);
-                color: inherit;
-                transition: opacity 0.3s;
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-            }
-            .breadcrumb__link svg{
-                fill: #2366be;
-            }
-            .breadcrumb__link:hover,
-            .breadcrumb__link--active {
-                opacity: 1;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <ul class="breadcrumb">
-                <li class="breadcrumb__item">
-                    <a class="breadcrumb__link" href="#">
-                        <svg width="16" height="16" viewBox="0 0 46 46">
-                            <path
-                                d="M3.5993 13.9611C3.15141 14.217 2.875 14.6934 2.875 15.2092V41.6875C2.875 42.4814 3.51859 43.125 4.3125 43.125H15.8125C16.6064 43.125 17.25 42.4814 17.25 41.6875V24.4375C17.25 23.6436 17.8936 23 18.6875 23H27.3125C28.1064 23 28.75 23.6436 28.75 24.4375V41.6875C28.75 42.4814 29.3936 43.125 30.1875 43.125H41.6875C42.4814 43.125 43.125 42.4814 43.125 41.6875V15.2092C43.125 14.6934 42.8486 14.217 42.4007 13.9611L23.7132 3.28254C23.2713 3.03001 22.7287 3.03001 22.2868 3.28254L3.5993 13.9611Z"
-                            />
-                        </svg>
-                    </a>
-                </li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Componentes</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Navegación</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--active" href="#"> Botones </a></li>
-            </ul>
-        </main>
-    </body>
-</html>
+<ul class="breadcrumb">
+    <li class="breadcrumb__item">
+        <a class="breadcrumb__link" href="#">
+            <svg width="16" height="16" viewBox="0 0 46 46">
+                <path
+                    d="M3.5993 13.9611C3.15141 14.217 2.875 14.6934 2.875 15.2092V41.6875C2.875 42.4814 3.51859 43.125 4.3125 43.125H15.8125C16.6064 43.125 17.25 42.4814 17.25 41.6875V24.4375C17.25 23.6436 17.8936 23 18.6875 23H27.3125C28.1064 23 28.75 23.6436 28.75 24.4375V41.6875C28.75 42.4814 29.3936 43.125 30.1875 43.125H41.6875C42.4814 43.125 43.125 42.4814 43.125 41.6875V15.2092C43.125 14.6934 42.8486 14.217 42.4007 13.9611L23.7132 3.28254C23.2713 3.03001 22.7287 3.03001 22.2868 3.28254L3.5993 13.9611Z"
+                />
+            </svg>
+        </a>
+    </li>
+    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Componentes</a></li>
+    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#"> Navegación</a></li>
+    <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--active" href="#"> Botones </a></li>
+</ul>

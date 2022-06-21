@@ -1,0 +1,66 @@
+.card {
+    width: 280px;
+    height: auto;
+    font-size: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    color: #6d6767;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 18px;
+    gap: 20px;
+}
+.card__picture {
+    width: 100%;
+    height: 140px;
+    background-image: url(/assets/image/background-300x200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.card__country-flag {
+    width: 20px;
+    height: 20px;
+}
+.card__avatar {
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 70px;
+    left: 0;
+}
+.card__avatar-image {
+    width: 125px;
+    height: 125px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    font-size: inherit;
+}
+
+.card__about {
+    margin-top: 50px;
+}
+
+.card__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card__links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.card__link {
+    padding: 6px;
+    color: #6d6767;
+    font-size: 18px;
+    fill: currentColor;
+    text-decoration: none;
+}
