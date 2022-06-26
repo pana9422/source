@@ -16,15 +16,17 @@
     border: none;
     font-size: 16px;
 
-    color: #2973b8;
-    fill: #2973b8;
+    color: #e0f0ff;
+    fill: #e0f0ff;
     cursor: pointer;
 
     transition: opacity 0.3s, background-color 0.3s;
 }
 .navigation__btn svg{
     height: 16px;
-    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
 }
 .navigation--s .navigation__btn {
     background-color: #2973b8;
@@ -37,7 +39,8 @@
 .navigation--l .navigation__btn,
 .navigation--o .navigation__btn {
     background-color: transparent;
-    color: #e0f0ff;
+    color: #2973b8;
+    fill: #2973b8;
 }
 
 .navigation--o .navigation__btn {
