@@ -1,42 +1,50 @@
-.navigation, .navigation__pages {
+.navigation,
+.navigation__pages {
     display: flex;
     gap: 12px;
     line-height: 1.5;
- }
- 
- .navigation__btn {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation__btn {
     min-width: 2.25em;
     min-height: 2.25em;
-     padding: .375em 0.75em;
-     border-radius: 6px;
+    padding: 0.375em 0.75em;
+    border-radius: 6px;
     border: none;
-     font-size: 16px;	
- 
-     color: #2973b8;
+    font-size: 16px;
+
+    color: #2973b8;
+    fill: #2973b8;
     cursor: pointer;
-    
-     transition: opacity .3s, background-color .3s;
- }
- 
- .navigation--s .navigation__btn {
+
+    transition: opacity 0.3s, background-color 0.3s;
+}
+.navigation__btn svg{
+    height: 16px;
+    height: 16px;
+}
+.navigation--s .navigation__btn {
     background-color: #2973b8;
- }
- 
- .navigation--s .navigation__btn:hover {
-     background-color: #195fa0;
- }
- 
- .navigation--l .navigation__btn,
- .navigation--o .navigation__btn {
+}
+
+.navigation--s .navigation__btn:hover {
+    background-color: #195fa0;
+}
+
+.navigation--l .navigation__btn,
+.navigation--o .navigation__btn {
     background-color: transparent;
-     color: #2973b8;
- }
- 
- .navigation--o .navigation__btn {
-     border: 1px solid #2973b8;
- }
- 
- .navigation--l .navigation__btn:hover,
- .navigation--o .navigation__btn:hover {
-     background-color: #2973b841;
- }
+    color: #e0f0ff;
+}
+
+.navigation--o .navigation__btn {
+    border: 1px solid #2973b8;
+}
+
+.navigation--l .navigation__btn:hover,
+.navigation--o .navigation__btn:hover {
+    background-color: #2973b841;
+}
