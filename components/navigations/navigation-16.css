@@ -1,42 +1,42 @@
 .navigation, .navigation__pages {
     display: flex;
-    gap: 1.2rem;
-    line-height: var(--text-base-line-height);
+    gap: 12px;
+    line-height: 1.5;
  }
  
  .navigation__btn {
     min-width: 2.25em;
     min-height: 2.25em;
      padding: .375em 0.75em;
-     border-radius: var(--border-radius);
+     border-radius: 6px;
     border: none;
-     font-size: var(--font-size-md);	
+     font-size: 16px;	
  
-     color: var(--france-50);
+     color: #2973b8;
     cursor: pointer;
     
-     transition: opacity var(--transition), background-color var(--transition);
+     transition: opacity .3s, background-color .3s;
  }
  
  .navigation--s .navigation__btn {
-    background-color: var(--france-500);
+    background-color: #2973b8;
  }
  
  .navigation--s .navigation__btn:hover {
-     background-color: var(--france-700);
+     background-color: #195fa0;
  }
  
  .navigation--l .navigation__btn,
  .navigation--o .navigation__btn {
     background-color: transparent;
-     color: var(--france-500);
+     color: #2973b8;
  }
  
  .navigation--o .navigation__btn {
-     border: 1px solid var(--france-500);
+     border: 1px solid #2973b8;
  }
  
  .navigation--l .navigation__btn:hover,
  .navigation--o .navigation__btn:hover {
-     background-color: var(--france\/20);
+     background-color: #2973b841;
  }
