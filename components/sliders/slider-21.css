@@ -1,0 +1,22 @@
+.slider__range {
+    height: 5px;
+    appearance: none;
+    outline: none;
+    border-radius: 50px;
+    position: relative;
+    background-image: linear-gradient(to right, #1b67ad 50%, #9acaf7 50%);
+}
+
+.slider__range::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #1b67ad;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.slider__range::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 5px #1b66ad44;
+}
