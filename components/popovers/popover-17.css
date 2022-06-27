@@ -1,73 +1,74 @@
 .popover {
-   width: 100%;
-   background-color: #fff;
-   border-radius: 6px;
-   color: #686767;
-   font-size: 16px;
-   position: relative;
-   border: 1px solid #e6e4e4;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #686767;
+    font-size: 16px;
+    position: relative;
+    border: 1px solid #e6e4e4;
 }
 
 .popover__title {
-   padding: 6px 12px;
-   background-color: #e6e4e4;
-   border-radius: 4px 4px 0 0;
-   margin: 0;
+    padding: 6px 12px;
+    background-color: #e6e4e4;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
 }
 
 .popover__content {
-   padding: 12px;
-   line-height: 1.5;
-   display: flex;
-   flex-direction: column;
-   gap: 12px;
+    padding: 12px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
-.popover__text{
+.popover__text {
     margin: 0;
 }
 
 .popover__footer {
-   background-color: #e6e4e4;
-   border-radius: 6px;
-   padding: 10px;
+    background-color: #e6e4e4;
+    border-radius: 6px;
+    padding: 10px;
 }
-.popover__footer p{
+.popover__footer p {
     margin: 0;
 }
 .popover--left::before,
 .popover--right::before,
 .popover--bottom::before,
 .popover--top::before {
-   content: "";
-   width: 15px; 
-   height: 15px;
-   position: absolute;
-   background-color: #fff;
-   border-bottom: 1px solid #e6e4e4;
-   border-left: 1px solid #e6e4e4;
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e4e4;
+    border-left: 1px solid #e6e4e4;
 }
 
 .popover--left::before {
-   bottom: 30%; 
-   left: -1px;
-   transform: translateX(-50%) rotate(45deg);
+    bottom: 30%;
+    left: -1px;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .popover--right::before {
-   bottom: 30%; 
-   right: -16px;
-   transform: translateX(-50%) rotate(225deg);
+    bottom: 30%;
+    right: -16px;
+    transform: translateX(-50%) rotate(225deg);
 }
 
 .popover--bottom::before {
-   bottom: -9px; 
-   left: 50%;
-   transform: translateX(-50%) rotate(-45deg);
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 .popover--top::before {
-   top: -9px; left: 50%;
-   transform: translateX(-50%) rotate(-45deg);
-   background-color: #e6e4e4;
-   border: none;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    background-color: #e6e4e4;
+    border: none;
 }
