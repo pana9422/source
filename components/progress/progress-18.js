@@ -1,5 +1,5 @@
 const progressBar = document.querySelector('.progress-bar');
-const progress = document.createElement('SPAN');
+const progress = document.createElement('span');
 
 progress.className = 'progress-bar__progress';
 progressBar.appendChild(progress);
