@@ -1,4 +1,6 @@
 .slider__range {
+    
+    margin-top: 10px ;
     height: 5px;
     appearance: none;
     outline: none;
