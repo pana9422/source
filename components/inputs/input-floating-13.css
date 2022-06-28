@@ -1,0 +1,47 @@
+.input-float {
+    margin-top: 20px;
+  color: #686363;
+  background-color: #fff; 
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input-float__input-box {
+  width: 100%;
+  border: 1px solid #999292;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input-float__input {
+  padding: 10px 12px;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #686363;
+  background-color: transparent;
+}
+.input-float__description {
+  font-size: 12px;
+}
+.input-float__label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 1;
+
+  transform: translateY(-50%);
+  font-size: 16px;
+  cursor: text;
+  line-height: 22,4px;
+  background-color: #fff;
+  transition: transform .3s, font-size .3s;
+}
+
+.input-float:hover .input-float__label,
+.input-float__input:focus + .input-float__label {
+  transform: translateY(-150%);
+  font-size: 80%;
+}
