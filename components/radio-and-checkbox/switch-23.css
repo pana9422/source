@@ -1,0 +1,49 @@
+.switch {
+    width: 44px;
+    height: 26px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline:none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .switch__body {
+    display: block;
+    width: 100%;
+    height: 15px;
+    background-color: #c4c4c4;
+    border-radius: 50px;
+  
+    transition: background-color .3s;
+  }
+  
+  .switch__icon {
+    width: 26px;
+    height: 26px;
+    background-color: #696666;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background-color .3s, left .3s;
+  }
+  
+  /*  State on */
+  
+  .switch--on .switch__body{
+    background-color: #3c8ce7;
+  }
+  
+  .switch--on .switch__icon  {
+    background-color: #1f528b;
+    left: calc(100% - 26px);
+  }
