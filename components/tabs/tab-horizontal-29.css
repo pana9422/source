@@ -1,0 +1,100 @@
+.tab {
+    max-width: 71.7rem;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 6px;
+    color: #5e5c5c;
+}
+.tab a {
+    color: inherit;
+}
+.tab__header {
+    display: flex;
+    position: relative;
+}
+.tab__tabs {
+    display: flex;
+    padding: 6px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.tab__item {
+    border-radius: 6px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+}
+.tab__item:hover {
+    color: #2868c7;
+    cursor: pointer;
+}
+.tab__item a {
+    text-decoration: none;
+}
+.tab__item--active {
+    color: #2868c7;
+    background-color: #2868c733;
+}
+/* --- Buttons --- */
+.tab__btn {
+    color: #5e5c5c;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: -10px 0 4px -7px #c5c8cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.tab__btn--visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.tab__btn:hover,
+.tab__btn:active {
+    background-color: #adccfa;
+    color: #2868c7;
+}
+/* --- End Buttons --- */
+.tab__body {
+    padding: 24px;
+}
+.tab--h .tab__header {
+    border-bottom: 1px solid #b9bcc1;
+}
+.tab--h .tab__btn {
+    width: 22px;
+    height: 100%;
+    top: 0;
+}
+.tab--h .tab__backBtn {
+    left: 0;
+}
+.tab--h .tab__nextBtn {
+    right: 0;
+}
+.tab--h .tab__backBtn {
+    transform: rotate(180deg);
+}
+.badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #e6e6e6;
+    background-color: #e93c45;
+    padding: 0.1em 0.4em;
+
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 6px;
+    top: 0;
+    right: 0;
+}
