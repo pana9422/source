@@ -6,6 +6,11 @@
     font-size: 16px;
     position: relative;
     border: 1px solid #e6e4e4;
+
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    transform-origin: top center;
 }
 
 .popover__title {
@@ -71,4 +76,41 @@
     transform: translateX(-50%) rotate(-45deg);
     background-color: #e6e4e4;
     border: none;
+}
+
+/* Button */
+.hoverme {
+   --font-size: 16px;
+    --line-height: 1.5;
+
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    width: max-content;
+    outline: none;
+    padding: 0.375em 0.75em;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75em;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: currentColor;
+    transition: opacity 0.3s, background-color 0.3s;
+    user-select: none;
+
+    background-color: #2589e7;
+    border-color: #2589e7;
+    color: #ebebeb;
+
+    margin: 1rem auto;
+}
+
+.hoverme:hover {
+    background-color: #1774ca;
+}
+
+.hoverme:hover ~ .popover {
+  opacity: 1;
+  transform: scale(1);
 }
