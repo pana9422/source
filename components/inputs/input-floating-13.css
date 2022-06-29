@@ -1,5 +1,5 @@
 .input-float {
-    margin-top: 20px;
+  margin-top: 20px;
   color: #686363;
   background-color: #fff; 
   display: flex;
@@ -32,6 +32,7 @@
   left: 10px;
   z-index: 1;
 
+  padding: 0 5px;
   transform: translateY(-50%);
   font-size: 16px;
   cursor: text;
@@ -42,6 +43,6 @@
 
 .input-float:hover .input-float__label,
 .input-float__input:focus + .input-float__label {
-  transform: translateY(-150%);
-  font-size: 80%;
+  transform: translateY(-170%);
+  font-size: 14px;
 }

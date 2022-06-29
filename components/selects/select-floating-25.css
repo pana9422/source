@@ -1,85 +1,134 @@
 .select-float {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
+    gap: 10px;
+ }
   
-  .select-float i {
-    color: var(--neutral-400);
-  }
-  
-  /* input */
-  .select-float__input {
+/* input */
+.select-float__input {
     width: 100%;
-  }
-  .select-float__inputEl {
-    height: 4.6rem;
-    color: var(--neutral-500);
-  }
-  
-  .select-float[data-selected='true'] .select-float__label {
-    transform: translateY(-150%);
-    font-size: var(--font-size-md);
-  }
-  
-  /* -- Content -- */
-  
-  .select-float__content {
-    display: none;
-    width: 100%;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--neutral-300);
-  }
-  
-  /* options */
-  .select-float__option {
-    display: none;
-    align-items: center;
-    gap: .6rem;
-    padding: .6rem 1.6rem;
-    cursor: pointer;
-    transition: background-color var(--transition);
-  }
-  
-  .select-float__option--selected {
-    background-color: var(--gray-iron-50);
-  }
-  
-  .select-float__option--filtered {
+    height: 46px;
+    color: #686363;
+    background-color: #fff; 
     display: flex;
-  }
+    flex-direction: column;
+    gap: 5px;
+ }
+
+.select-float__input-box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #bfbfc2;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.select-float__inputEl {
+  padding: 10px 12px;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #686363;
+  background-color: transparent;
+
+  height: 46px;
+  color: #8E8E8E;
+}
+
+.select-float__label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 1;
+  padding: 0 5px;
+  color: #AAAAAE;
+
+  transform: translateY(-50%);
+  font-size: 16px;
+  cursor: text;
+  line-height: 22,4px;
+  background-color: #fff;
+  transition: transform .3s, font-size .3s;
+}
+
+.select-float[data-selected='true'] .select-float__label {
+  transform: translateY(-170%);
+  font-size: 14px;
+}
+
+.select-float__input:hover .select-float__label,
+.select-float__inputEl:focus + .select-float__label {
+  transform: translateY(-170%);
+  font-size: 14px;
+}
+
+/* --------- */
+
+/* -- Content -- */
   
-  .select-float__nomatches {
-    display: none;
-    padding: .6rem 1.6rem;
-    color: var(--bermellon-500);
-  }
-  
-  .select-float__opt-icon,
-  .select-float__opt-value {
-    padding: .5rem;
-    transition: color var(--transition);
-  }
-  
-  .select-float__opt-value {
-    color: var(--neutral-500);
-  }
-  
-  .select-float__option:hover .select-float__opt-icon,
-  .select-float__option:hover .select-float__opt-value {
-    color: var(--neutral-700);
-  }
-  
-  .select-float__option:last-child {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-  }
-  
-  .select-float__option:first-child {
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-  }
-  
-  /* == Open state == */
-  .select-float--open .select-float__content {
-    display: block;
-  }
-  
+.select-float__content {
+  display: none;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #bfbfc2;
+}
+
+/* options */
+.select-float__options {
+  padding: 0;
+  margin: 0;
+}
+.select-float__option {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.select-float__option--selected {
+  background-color: #F4F6F7;
+}
+
+.select-float__option--filtered {
+  display: flex;
+}
+
+.select-float__nomatches {
+  display: none;
+  padding: 6px 16px;
+  color: #D95C52;
+}
+
+.select-float__opt-icon,
+.select-float__opt-value {
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.select-float__opt-value {
+  color: #8E8E8E;
+}
+
+.select-float__option:hover .select-float__opt-icon,
+.select-float__option:hover .select-float__opt-value {
+  color: #727272;
+}
+
+.select-float__option:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.select-float__option:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+/* == Open state == */
+.select-float--open .select-float__content {
+  display: block;
+}
+
