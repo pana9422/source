@@ -1,0 +1,30 @@
+.tag{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    gap: 6px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: calc(1em * 1.6);
+    cursor: pointer;
+    user-select: none;
+    background-color: #3f7ddb;
+    color: #e2ebff;
+    transition: background-color .3s;
+    text-decoration: none;
+}
+.tag:hover{
+    background-color: #2758a3;
+}
+.tag__closed{
+    color: #e2ebff;
+    display: flex;
+    align-items: center;
+}
+.tag__closed svg{
+    fill: #e2ebff;
+    width: .8em;
+    height: .8em;
+}
