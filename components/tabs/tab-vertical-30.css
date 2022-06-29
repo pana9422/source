@@ -1,24 +1,27 @@
 .tab {
-  max-width: 600px;
-  width: 100%;
+  max-width: 71.7rem;
   background-color: #fff;
   border-radius: 6px;
   padding: 6px;
   color: #5e5c5c;
 }
+
 .tab a {
   color: inherit;
 }
+
 .tab__header {
   display: flex;
   position: relative;
 }
+
 .tab__tabs {
   display: flex;
   padding: 6px;
   overflow: hidden;
   scroll-behavior: smooth;
 }
+
 .tab__item {
   border-radius: 6px;
   padding: 6px 12px;
@@ -27,6 +30,7 @@
   gap: 6px;
   transition: color 0.3s;
 }
+
 .tab__item:hover {
   color: #2868c7;
   cursor: pointer;
@@ -38,52 +42,81 @@
   color: #2868c7;
   background-color: #2868c733;
 }
+
 /* --- Buttons --- */
 .tab__btn {
   color: #5e5c5c;
   border: none;
   outline: none;
   background-color: #fff;
-  box-shadow: -10px 0 4px -7px #999ca333;
+  box-shadow: -10px 0 4px -7px #c5c8cd;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
   position: absolute;
+
   opacity: 0;
   transform: scale(0);
+
   transition: opacity 0.3s, transform 0.3s;
 }
+
 .tab__btn--visible {
   opacity: 1;
   transform: scale(1);
 }
+
 .tab__btn:hover,
 .tab__btn:active {
-  background-color: #e2eeff;
+  background-color: #adccfa;
   color: #2868c7;
 }
+
 /* --- End Buttons --- */
+
 .tab__body {
   padding: 24px;
 }
-.tab--h .tab__header {
-  border-bottom: 1px solid #b9bcc1;
+
+/* Vertical */
+.tab--v {
+  max-height: 300px;
+  display: flex;
 }
-.tab--h .tab__btn {
-  width: 22px;
-  height: 100%;
-  top: 0;
+
+.tab--v .tab__header {
+  flex-direction: column;
+  border-right: 1px solid #cecece;
 }
-.tab--h .tab__backBtn {
-  left: 0;
+
+.tab--v .tab__tabs {
+  min-width: 204px;
+  flex-direction: column;
+  gap: 6px;
 }
-.tab--h .tab__nextBtn {
+
+.tab--v .tab__btn {
+  width: 100%;
+  height: 26px;
   right: 0;
+  box-shadow: 0 -10px 4px -7px #ece9e9;
 }
-.tab--h .tab__backBtn {
+
+.tab--v .tab__backBtn {
+  top: 0;
   transform: rotate(180deg);
 }
+
+.tab--v .tab__nextBtn {
+  bottom: 0;
+}
+
+.tab--v .tab__ri {
+  transform: rotate(90deg);
+}
+
 .badge {
   display: inline-flex;
   justify-content: center;
