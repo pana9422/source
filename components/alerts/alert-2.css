@@ -1,21 +1,25 @@
+body{
+    overflow: hidden;
+}
 .alert {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
     background-color: #2f8de7;
     color: #ebf5ff;
     padding: 12px 24px;
     border-radius: 6px;
-
     border: 1px solid #2f8de7;
-    font-size: 16px;
-
+    font-size: 14px;
     display: flex;
     gap: 12px;
-    max-width: 600px;
+    max-width: 350px;
     width: 100%;
-
-    opacity: 0;
-    transform: scale(0);
-
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    opacity: 1;
+    overflow: hidden;
+    transform:  translateY( calc(100% + 15px));
+    transform-origin: top;
+    transition: opacity .3s ease-in-out, transform .6s ease-in-out;
 }
 .alert__callout {
     position: relative;
@@ -54,6 +58,7 @@
 }
 .alert__closed:hover {
     opacity: 1;
+    transform:  translateY(0);
 }
 .alert__content {
     flex-grow: 1;
@@ -62,14 +67,11 @@
 .alert__content p {
     margin: 0;
 }
-
 /* Visible alert */
 .alert--visible {
   opacity: 1;
-  transform: scale(1);
+    transform:  translateY(0);
 }
-
-
 /* button */
 .show-alert {
     --font-size: 16px;
@@ -88,13 +90,12 @@
     cursor: pointer;
     border: 1px solid;
     border-color: currentColor;
-    transition: opacity 0.3s, background-color 0.3s;
+    transition: opacity 0.1s, background-color .3s;
     user-select: none;
 
     background-color: transparent;
     color: #1774ca;
 }
-
 .show-alert:hover {
    background-color: #1774ca33;
 }
